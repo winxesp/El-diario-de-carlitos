@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>El diario de Carlitos</title>
+<link rel="icon" type="image/png" href="./assets/carlitos-favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;family=Rubik:wght@400;500;700;900&amp;display=swap" rel="stylesheet">
+<script src="./image-slot.js"></script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  * { box-sizing: border-box; }
+  a { color: var(--pri-bright); }
+  a:hover { color: #fff; }
+  img.pixelated { image-rendering: pixelated; image-rendering: crisp-edges; }
+  ::selection { background: var(--pri); color: #fff; }
+  @keyframes floaty { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  @keyframes haloPulse { 0%,100% { opacity: .55; transform: scale(1); } 50% { opacity: .9; transform: scale(1.06); } }
+  :root {
+    --bg: #0d0a1a;
+    --pri: #9d5cff;
+    --pri-bright: #b98cff;
+    --pri-deep: #4a2a80;
+    --card: #191033;
+    --card-2: #201542;
+    --ink: #ece7fb;
+    --muted: #a89ccb;
+    --diamond: #4be3d4;
+    --line: #33265e;
+  }
+</style>
+</helmet>
+<div style="font-family: Rubik, sans-serif; background: radial-gradient(1200px 700px at 50% -10%, #1c1140 0%, var(--bg) 60%); color: var(--ink); min-height: 100vh; overflow-x: hidden;">
+
+  <!-- ===== HERO ===== -->
+  <header style="position: relative; max-width: 1080px; margin: 0 auto; padding: 84px 22px 64px; text-align: center;">
+    <div style="display: inline-block; font-family: 'Press Start 2P', monospace; font-size: 11px; letter-spacing: 1px; color: var(--pri-bright); background: rgba(157,92,255,.12); border: 2px solid var(--line); padding: 9px 14px; margin-bottom: 26px;">CANAL &nbsp;WinxESP</div>
+    <h1 style="font-family: 'Press Start 2P', monospace; font-size: clamp(26px, 6.2vw, 58px); line-height: 1.25; margin: 0 0 22px; color: #fff; text-shadow: 0 4px 0 var(--pri-deep), 0 0 26px rgba(157,92,255,.5);">El diario<br>de Carlitos</h1>
+    <p style="font-size: clamp(16px, 2.4vw, 21px); color: var(--muted); max-width: 620px; margin: 0 auto 38px; line-height: 1.6;">Una IA suelta en Minecraft. <strong style="color: var(--ink);">Tú mandas, él lo intenta.</strong></p>
+    <div style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfD9SLPik4I8L8hrwA3kwSdmX4uAtm9SmdsEJmnZtsxfMUkfA/viewform?usp=publish-editor" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 26px; background: var(--pri); color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; font-size: 15px; text-decoration: none; border: 3px solid #000; box-shadow: 0 6px 0 var(--pri-deep), inset 0 3px 0 rgba(255,255,255,.28);" style-hover="transform: translateY(2px); box-shadow: 0 4px 0 var(--pri-deep), inset 0 3px 0 rgba(255,255,255,.28);">▸ Proponer una idea</a>
+      <a href="https://www.youtube.com/@WinxESP" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 16px 26px; background: transparent; color: var(--ink); font-weight: 700; text-transform: uppercase; letter-spacing: .07em; font-size: 15px; text-decoration: none; border: 3px solid var(--pri); box-shadow: 0 6px 0 #241844;" style-hover="transform: translateY(2px); box-shadow: 0 4px 0 #241844; background: rgba(157,92,255,.12);">Ver el canal</a>
+    </div>
+    <div aria-hidden="true" style="position: absolute; left: 8%; top: 60px; width: 26px; height: 26px; background: var(--pri); opacity: .4; box-shadow: 40px 120px 0 var(--diamond), -10px 220px 0 var(--pri-bright);"></div>
+    <div aria-hidden="true" style="position: absolute; right: 9%; top: 100px; width: 20px; height: 20px; background: var(--diamond); opacity: .35; box-shadow: -60px 90px 0 var(--pri), 30px 200px 0 var(--pri-bright);"></div>
+  </header>
+
+  <!-- ===== FICHA DE CARLITOS ===== -->
+  <section style="max-width: 1080px; margin: 0 auto; padding: 20px 22px 70px;">
+    <div style="background: linear-gradient(180deg, var(--card-2), var(--card)); border: 3px solid var(--line); box-shadow: 0 10px 0 #0b0718, 0 0 60px rgba(157,92,255,.15); padding: 6px;">
+      <div style="border: 2px dashed var(--line); padding: 26px; display: grid; grid-template-columns: 220px 1fr; gap: 34px; align-items: stretch;">
+
+        <div style="display: flex; flex-direction: column; align-items: center; justify-content: flex-start;">
+          <div style="position: relative; width: 100%; display: flex; justify-content: center; padding: 18px 0 6px;">
+            <div aria-hidden="true" style="position: absolute; width: 170px; height: 170px; top: 30px; border-radius: 50%; background: radial-gradient(circle, var(--pri) 0%, rgba(157,92,255,0) 70%); animation: haloPulse 3.4s ease-in-out infinite;"></div>
+            <img src="./assets/carlitos-skin.png" class="pixelated" alt="Skin de Carlitos" style="position: relative; width: 128px; height: auto; filter: drop-shadow(0 12px 14px rgba(0,0,0,.6)); animation: floaty 4.5s ease-in-out infinite;">
+          </div>
+          <div style="font-family: 'Press Start 2P', monospace; font-size: 15px; color: #fff; margin-top: 10px; text-shadow: 0 3px 0 var(--pri-deep);">CARLITOS</div>
+          <div style="font-size: 12px; text-transform: uppercase; letter-spacing: .16em; color: var(--pri-bright); margin-top: 8px;">IA · Nivel PvP ∞</div>
+        </div>
+
+        <div style="min-width: 0;">
+          <div style="font-family: 'Press Start 2P', monospace; font-size: 12px; color: var(--muted); margin-bottom: 18px;">RASGOS</div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+
+            <div style="display: flex; gap: 14px; align-items: flex-start; background: rgba(0,0,0,.22); border-left: 4px solid var(--pri); padding: 14px 16px;">
+              <div style="flex: none; width: 42px; height: 42px; display: grid; place-items: center; background: rgba(157,92,255,.16); border: 2px solid var(--line);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b98cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8 15c1 1.3 6.5 1.3 8 0"></path><path d="M8.5 9.5h.01M15.5 9.5h.01"></path></svg>
+              </div>
+              <div><div style="font-weight: 900; font-size: 17px; color: #fff;">Pendejo</div><div style="color: var(--muted); font-size: 15px; margin-top: 2px;">Entiende las órdenes… a su manera.</div></div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: flex-start; background: rgba(0,0,0,.22); border-left: 4px solid var(--pri); padding: 14px 16px;">
+              <div style="flex: none; width: 42px; height: 42px; display: grid; place-items: center; background: rgba(157,92,255,.16); border: 2px solid var(--line);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#b98cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5 20 3v5.5L9 19l-3 1-2-2 1-3z"></path><path d="M9.5 3.5 4 3v5.5L15 19l3 1 2-2-1-3z"></path></svg>
+              </div>
+              <div><div style="font-weight: 900; font-size: 17px; color: #fff;">Máquina en PvP</div><div style="color: var(--muted); font-size: 15px; margin-top: 2px;">En combate no perdona.</div></div>
+            </div>
+
+            <div style="display: flex; gap: 14px; align-items: flex-start; background: rgba(0,0,0,.22); border-left: 4px solid var(--diamond); padding: 14px 16px;">
+              <div style="flex: none; width: 42px; height: 42px; display: grid; place-items: center; background: rgba(75,227,212,.14); border: 2px solid var(--line);">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4be3d4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"></path><circle cx="12" cy="12" r="3"></circle></svg>
+              </div>
+              <div><div style="font-weight: 900; font-size: 17px; color: #fff;">Tramposo</div><div style="color: var(--muted); font-size: 15px; margin-top: 2px;">Tiene x-ray y no piensa disimularlo.</div></div>
+            </div>
+          </div>
+
+          <div style="font-family: 'Press Start 2P', monospace; font-size: 12px; color: var(--muted); margin: 26px 0 14px;">ESTADÍSTICAS</div>
+          <div style="display: flex; justify-content: center; gap: 12px;">
+            <div style="flex: 1; max-width: 220px; background: rgba(0,0,0,.28); border: 2px solid var(--line); padding: 14px 8px; text-align: center;"><div style="font-family: 'Press Start 2P', monospace; font-size: 22px; color: #ff6b6b;">0</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px; text-transform: uppercase; letter-spacing: .05em;">Muertes</div></div>
+            <div style="flex: 1; max-width: 220px; background: rgba(0,0,0,.28); border: 2px solid var(--line); padding: 14px 8px; text-align: center;"><div style="font-family: 'Press Start 2P', monospace; font-size: 22px; color: var(--diamond);">0</div><div style="font-size: 12px; color: var(--muted); margin-top: 8px; text-transform: uppercase; letter-spacing: .05em;">KILLS</div></div>
+          </div>
+
+          <div style="margin-top: 20px; background: rgba(157,92,255,.1); border: 2px solid var(--line); padding: 14px 16px; font-size: 15px; color: var(--muted);">Frase mítica del último vídeo: <em style="color: var(--ink); font-style: italic;">A ese arbol no le va a dar tiempo de crecer 2 veces</em></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROPÓN TU IDEA ===== -->
+  <section id="proponer" style="max-width: 1080px; margin: 0 auto; padding: 24px 22px 70px;">
+    <h2 style="font-family: 'Press Start 2P', monospace; font-size: clamp(18px, 4vw, 30px); color: #fff; margin: 0 0 26px; text-shadow: 0 3px 0 var(--pri-deep);">Propón tu idea</h2>
+    <div style="background: linear-gradient(180deg, var(--card-2), var(--card)); border: 3px solid var(--line); box-shadow: 0 8px 0 #0b0718; padding: 40px 32px; text-align: center; max-width: 640px; margin: 0 auto;">
+      <p style="color: var(--muted); font-size: 17px; line-height: 1.6; margin: 0 0 26px;">Propón la idea que quieras en el formulario. Las mejores pasan a votación en mi canal de YouTube y las ganadoras salen en el próximo vídeo.</p>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfD9SLPik4I8L8hrwA3kwSdmX4uAtm9SmdsEJmnZtsxfMUkfA/viewform?usp=publish-editor" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 17px 30px; background: var(--pri); color: #fff; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; font-size: 15px; text-decoration: none; border: 3px solid #000; box-shadow: 0 6px 0 var(--pri-deep), inset 0 3px 0 rgba(255,255,255,.28);" style-hover="transform: translateY(2px); box-shadow: 0 4px 0 var(--pri-deep), inset 0 3px 0 rgba(255,255,255,.28);">▸ Proponer una idea</a>
+      <p style="font-size: 13px; color: var(--muted); margin: 22px 0 0; opacity: .8;">¿Ya propusiste? La votación se hace en los vídeos y posts de la comunidad de YouTube.</p>
+    </div>
+  </section>
+
+  <!-- ===== SALÓN DE LA FAMA ===== -->
+  <section style="max-width: 1080px; margin: 0 auto; padding: 24px 22px 70px;">
+    <h2 style="font-family: 'Press Start 2P', monospace; font-size: clamp(18px, 4vw, 30px); color: #fff; margin: 0 0 26px; text-shadow: 0 3px 0 var(--pri-deep);">Salón de la fama</h2>
+    <div style="display: flex; justify-content: center;">
+
+      <a href="https://youtu.be/OGBIU6hwhoY?si=X4D6XlEiuFYxwqMn" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: block; width: 100%; max-width: 360px; background: var(--card); border: 3px solid var(--line); box-shadow: 0 8px 0 #0b0718;" style-hover="transform: translateY(2px); box-shadow: 0 6px 0 #0b0718; border-color: var(--pri);">
+        <div style="aspect-ratio: 16/9; position: relative; overflow: hidden;"><image-slot id="fama-1" shape="rect" placeholder="Miniatura del vídeo"></image-slot></div>
+        <div style="padding: 16px;"><div style="font-weight: 900; font-size: 17px; color: #fff; line-height: 1.35;">Metí a Verity en el mundo de mi IA, carlitos (Parte 1)</div><div style="display: inline-flex; align-items: center; gap: 7px; color: var(--pri-bright); font-size: 14px; font-weight: 700; margin-top: 10px;">▸ Ver vídeo</div></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer style="border-top: 3px solid var(--line); background: #0a0716;">
+    <div style="max-width: 1080px; margin: 0 auto; padding: 44px 22px 52px;">
+      <div style="font-family: 'Press Start 2P', monospace; font-size: 14px; color: #fff; text-align: center; margin-bottom: 26px; text-shadow: 0 3px 0 var(--pri-deep);">El diario de Carlitos</div>
+      <div style="display: flex; flex-wrap: wrap; gap: 14px; justify-content: center;">
+        <a href="https://www.youtube.com/@WinxESP" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; background: var(--card); border: 2px solid var(--line); color: var(--ink); text-decoration: none; font-weight: 700;" style-hover="border-color: #ff4d4d; color: #fff;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#ff4d4d"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.8-1.8C19.3 5 12 5 12 5s-7.3 0-8.8.5A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.8 1.8C4.7 19 12 19 12 19s7.3 0 8.8-.5a2.5 2.5 0 0 0 1.8-1.8C23 15.2 23 12 23 12zM9.8 15.3V8.7l5.7 3.3z"></path></svg>
+          YouTube
+        </a>
+        <a href="https://discord.gg/DkxE822RHp" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; background: var(--card); border: 2px solid var(--line); color: var(--ink); text-decoration: none; font-weight: 700;" style-hover="border-color: var(--pri); color: #fff;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#b98cff"><path d="M19.6 5.6A17 17 0 0 0 15.4 4.3l-.2.4a15.7 15.7 0 0 1 3.7 1.2 12.7 12.7 0 0 0-11.8 0A15.7 15.7 0 0 1 10.8 4.7l-.2-.4A17 17 0 0 0 6.4 5.6C3.3 10.1 2.5 14.5 2.9 18.8a17 17 0 0 0 5.2 2.6l.4-.6a11 11 0 0 1-1.9-.9l.5-.4a12 12 0 0 0 10.3 0l.5.4a11 11 0 0 1-1.9.9l.4.6a17 17 0 0 0 5.2-2.6c.5-5-0.8-9.3-3-13.2zM9.2 16.2c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1zm5.6 0c-1 0-1.9-.9-1.9-2.1s.8-2.1 1.9-2.1 1.9 1 1.9 2.1-.8 2.1-1.9 2.1z"></path></svg>
+          Discord
+        </a>
+        <a href="https://ko-fi.com/carlitos0" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; background: #ffb443; border: 2px solid #000; color: #1a1200; text-decoration: none; font-weight: 700; box-shadow: 0 4px 0 #b3791f;" style-hover="transform: translateY(2px); box-shadow: 0 2px 0 #b3791f;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1a1200" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4z"></path><path d="M6 1v3M10 1v3M14 1v3"></path></svg>
+          Apóyame en Ko-fi
+        </a>
+      </div>
+      <div style="text-align: center; color: var(--muted); font-size: 13px; margin-top: 28px;">Hecho por y para la comunidad de WinxESP · Carlitos sigue haciendo trampas.</div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;primaryColor&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#9d5cff&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Estilo&quot;}}">
+class Component extends DCLogic {
+  componentDidMount() {
+    if (this.props.primaryColor) {
+      document.documentElement.style.setProperty('--pri', this.props.primaryColor);
+    }
+  }
+  renderVals() { return {}; }
+}
+</script>
+</body>
+</html>
